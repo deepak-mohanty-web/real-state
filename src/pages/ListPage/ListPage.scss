@@ -1,0 +1,45 @@
+.listpage {
+  display: flex;
+  height: 100%;
+
+  .listContainer {
+    flex: 3;
+    .wrapper {
+      height: 100%;
+      padding-right: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: scroll;
+      padding-bottom: 50px;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f9410d; // Light pink background color
+        border-radius: 50px; // Rounded corners for the track
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #e90606; // Light grey for the thumb
+        border-radius: 50px; // Rounded corners for the thumb
+        border: 2px solid #e93a0a; // Border color matching the track
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #ea0404; // Slightly darker on hover
+      }
+
+      // Firefox
+      scrollbar-width: thin;
+      scrollbar-color: #d3d3d3 #fcf5f3;
+    }
+  }
+  .mapContainer {
+    flex: 2;
+    height: 100%;
+    background-color: #fcf5f3;
+  }
+}
